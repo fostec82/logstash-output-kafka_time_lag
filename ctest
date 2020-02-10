@@ -1,0 +1,7 @@
+#!/bin/bash
+/usr/share/logstash/bin/logstash-plugin install /mounted/logstash-filter-influxdb-0.1.0.gem
+
+
+# /usr/share/logstash/bin/logstash -e 'input { stdin{} } filter { influxdb {} } output {stdout { codec => rubydebug }}'
+
+/usr/share/logstash/bin/logstash -f /mounted/test.conf

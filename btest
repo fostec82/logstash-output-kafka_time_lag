@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -f *.gem
+gem build logstash-filter-influxdb.gemspec
+docker run -ti -v `pwd`:/mounted logstash-output-kafka-time-lag /bin/bash
